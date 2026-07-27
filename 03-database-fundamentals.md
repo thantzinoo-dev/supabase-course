@@ -3,7 +3,7 @@
 ## ဒီ chapter မှာ ဘာတွေ လုပ်မှာလဲ
 
 - Postgres ကို Express developer angle ကနေ နားလည်မယ်
-- Mont-Tae အတွက် `profiles`, `recipes`, `comments` schema ဆောက်မယ်
+- Mont-Sha အတွက် `profiles`, `recipes`, `comments` schema ဆောက်မယ်
 - UUID, foreign key, timestamp, constraint ကို practical သိမယ်
 
 ## Postgres mindset
@@ -25,7 +25,7 @@ Naming rule: table/column တွေကို **lowercase `snake_case`** သု�
 
 `timestamptz` ကို `timestamp` ထက် user-generated event တွေအတွက် ရွေးပါ။ Backend က UTC မှာသိမ်းပြီး client က local timezone နဲ့ပြမယ်။
 
-## Mont-Tae schema
+## Mont-Sha schema
 
 SQL Editor မှာ တစ်ခါတည်း run ပါ။ `gen_random_uuid()` က Supabase Postgres မှာ available ဖြစ်တယ်။
 
@@ -112,7 +112,7 @@ before update on public.recipes
 for each row execute function public.set_updated_at();
 ```
 
-## ငဲ့ညီ/မ လေး — သတိထားရမယ့်
+## ညီလေး — သတိထားရမယ့်
 
 - Foreign key မရှိရင် orphan rows, broken joins ဖြစ်တတ်တယ်။ relation ရှိရင် DB ကို enforce လုပ်ခိုင်းပါ။
 - `on delete cascade` က parent ဖျက်ရင် child အကုန်ဖျက်မယ်။ Recipe delete မှာ comments ဖျက်တာကောင်းပေမဲ့ financial/audit data မှာ မစဉ်းစားဘဲမသုံးပါနဲ့။

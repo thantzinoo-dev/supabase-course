@@ -22,7 +22,7 @@ begin
   insert into public.profiles (id, display_name)
   values (
     new.id,
-    coalesce(new.raw_user_meta_data ->> 'display_name', 'Mont-Tae user')
+    coalesce(new.raw_user_meta_data ->> 'display_name', 'Mont-Sha user')
   );
   return new;
 end;
@@ -118,7 +118,7 @@ await supabase.auth.resetPasswordForEmail(
 
 Reset callback ရပြီးမှ `supabase.auth.updateUser(UserAttributes(password: newPassword))` နဲ့ password အသစ်သတ်မှတ်တယ်။ ဒါကို login screen မှာ "forgot password" flow အဖြစ်သီးသန့်ထားပါ။
 
-## ငဲ့ညီ/မ လေး — သတိထားရမယ့်
+## ညီလေး — သတိထားရမယ့်
 
 - Auth ကို UI redirect နဲ့တင် protect မလုပ်ပါနဲ့။ RLS က data access အမှန်တကယ်ပိတ်ပေးရမယ်။
 - Auth user ID ကို email နဲ့မနှိုင်းပါနဲ့။ Foreign key/policies အတွက် UUID `user.id` သုံးပါ။

@@ -121,7 +121,7 @@ useEffect(() => {
 
 Initial comments ကို normal query နဲ့ယူ, incoming event တွေကို state ထဲ merge လုပ်ပါ။ Event အသစ်တိုင်း page refetch လုပ်တာ MVP မှာရပေမဲ့ traffic များရင် inefficient ဖြစ်တယ်။
 
-## ငဲ့ညီ/မ လေး — သတိထားရမယ့်
+## ညီလေး — သတိထားရမယ့်
 
 - Realtime ကို every table/every row အတွက် မဖွင့်ပါနဲ့။ User value ရှိတဲ့ use case မှာပဲသုံးပါ။
 - Subscription ကို widget/component unmount မှာ cleanup မလုပ်ရင် duplicate event, memory/network waste ဖြစ်တယ်။

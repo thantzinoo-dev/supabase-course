@@ -3,7 +3,7 @@
 ## ဒီ chapter မှာ ဘာတွေ လုပ်မှာလဲ
 
 - ဒီ course ပြီးရင် ဘာကိုဆက်သင်မလဲ
-- Mont-Tae ကို real app အဖြစ်တိုးဖို့ roadmap
+- Mont-Sha ကို real app အဖြစ်တိုးဖို့ roadmap
 - Useful Supabase resources
 
 ## မင်းအခုရထားတာ
@@ -20,7 +20,7 @@
 
 ဒီ foundation က app အများကြီးအတွက်တူတူသုံးလို့ရတယ်။ Recipe app ကို notes app, marketplace, booking, chat app ပြောင်းတာက schema/business rules ပဲပြောင်းတာ။
 
-## Mont-Tae v2 roadmap
+## Mont-Sha v2 roadmap
 
 1. **Categories/tags**: `categories`, `recipe_categories` junction table. JSON array မထားဘဲ many-to-many relation practice လုပ်ပါ။
 2. **Likes/bookmarks**: `(user_id, recipe_id)` composite unique constraint နဲ့ duplicate like မဖြစ်အောင်လုပ်ပါ။

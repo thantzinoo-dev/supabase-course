@@ -1,11 +1,11 @@
-# Supabase Course — မုန့်တွေ့ (Mont-Tae) Recipe App
+# Supabase Course — မုန့်ရှာ (Mont-Sha) Recipe App
 
 > အကြီးတစ်ယောက်ဆို... junior တစ်ယောက်ကို Supabase ကို အစကနေ production တကယ်တင်တဲ့အထိ လက်တွေ့လုပ်ပြပြီး သင်ပေးတဲ့ course ပါ။
 > Burmese ရှင်းပြ + English technical terms ထည့်ထားတယ်။ Code တွေက Flutter နဲ့ Next.js နှစ်ဖက်လုံး။
 
 ---
 
-## ညီ/မလေး ဒီ course က ဘာလဲ?
+## ညီလေး ဒီ course က ဘာလဲ?
 
 ဒီ course ကို မင်းလိုပဲ backend အကြောင်းသိပြီး၊ Express.js နဲ့ API တွေရေးဖူးတယ်၊ basic SQL သိတယ်၊ Postgres တော့မသိသေးဘူး၊ Supabase ကတော့ မှည့်စပါးပဲ — ဆိုတဲ့သူအတွက် ရေးထားတာပါ။
 
@@ -13,9 +13,9 @@
 
 ---
 
-## ကျွန်တော်တို့ တည်ဆောက်မယ့် project — မုန့်တွေ့ (Mont-Tae)
+## ကျွန်တော်တို့ တည်ဆောက်မယ့် project — မုန့်ရှာ (Mont-Sha)
 
-မုန့်တွေ့ ဆိုတာ Burmese recipe တွေမျှဝေတဲ့ social app တစ်ခုပါ။ Features:
+မုန့်ရှာ ဆိုတာ Burmese recipe တွေမျှဝေတဲ့ social app တစ်ခုပါ။ Features:
 
 - **Auth** — email/password နဲ့ Google sign-in
 - **Recipes** — မုန့်ဟင်းနယ်တွေတင်တာ၊ ဓာတ်ပုံတွေပါတယ်

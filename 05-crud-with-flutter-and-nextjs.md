@@ -160,7 +160,7 @@ try {
 
 Production UI မှာ raw database error ကို user ကိုမပြပါနဲ့။ Log full error, UI မှာ "Could not save recipe. Try again." လို actionable message ပြပါ။
 
-## ငဲ့ညီ/မ လေး — သတိထားရမယ့်
+## ညီလေး — သတိထားရမယ့်
 
 - `select('*')` prototype မှာ OK, production list page မှာ လိုတဲ့ columns ပဲရွေးပါ။
 - `.single()` က 0 or >1 row ဖြစ်ရင် error ပေးတယ်။ optional result အတွက် `.maybeSingle()` သုံးပါ။

@@ -9,7 +9,7 @@
 
 ## Bucket design
 
-Mont-Tae recipe cover image တွေ လူတိုင်းမြင်ရမယ်ဆိုတော့ `recipe-images` ကို **public bucket** လုပ်မယ်။ Public က "file URL ကိုသိသူ download လုပ်လို့ရ" ဆိုတာပါ; upload/delete က RLS policy နဲ့ပဲ အုပ်ချုပ်ရသေးတယ်။
+Mont-Sha recipe cover image တွေ လူတိုင်းမြင်ရမယ်ဆိုတော့ `recipe-images` ကို **public bucket** လုပ်မယ်။ Public က "file URL ကိုသိသူ download လုပ်လို့ရ" ဆိုတာပါ; upload/delete က RLS policy နဲ့ပဲ အုပ်ချုပ်ရသေးတယ်။
 
 Dashboard -> Storage -> New bucket:
 
@@ -128,7 +128,7 @@ if (error) throw error
 
 Server က secret key သုံးပြီး arbitrary user upload မလုပ်ပါနဲ့။ Client upload + Storage RLS က user ownership ကို policy နဲ့အတည်ပြုတာက ရိုးရှင်းပြီး secure ဖြစ်တယ်။
 
-## ငဲ့ညီ/မ လေး — သတိထားရမယ့်
+## ညီလေး — သတိထားရမယ့်
 
 - Filename ကို user input ပေးသလို တိုက်သုံးမနေပါနဲ့; random/controlled path သုံးပါ။
 - MIME type client ပို့တဲ့ဟာကို 100% မယုံပါနဲ့။ Allowed MIME types/size limits bucket မှာထားပါ; sensitive system မှာ server-side file validation ပါထည့်ပါ။

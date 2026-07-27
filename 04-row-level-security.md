@@ -4,7 +4,7 @@
 
 - RLS က ဘာကြောင့် client-direct Supabase ရဲ့ security core ဖြစ်လဲ
 - `using` နဲ့ `with check` မတူတာဘာလဲ
-- Mont-Tae tables ကို user ownership နဲ့ lock ချမယ်
+- Mont-Sha tables ကို user ownership နဲ့ lock ချမယ်
 
 ## RLS ကို Express middleware လို့မြင်ပါ
 
@@ -28,7 +28,7 @@ using (is_published = true);
 - `for update`: old row `using`, new row `with check` နှစ်ခုလုံးထည့်နိုင်တယ်။
 - `auth.uid()` က current logged-in user UUID ကိုပေးတယ်။ Login မရှိရင် `null`။
 
-## Mont-Tae policies
+## Mont-Sha policies
 
 Schema ဆောက်ပြီးနောက် SQL Editor မှာ run ပါ။
 
@@ -111,7 +111,7 @@ with check (true);
 
 Insert လုပ်တဲ့အခါ user ID ကို data ထဲ ထည့်ရမယ်; RLS က payload ကို authenticated user နဲ့တူမတူ စစ်မယ်။ Module 05 မှာ code ရေးမယ်။ Client ပို့တဲ့ ID ကို trust လုပ်တာမဟုတ်ဘူး, policy နဲ့ verify လုပ်တာပါ။
 
-## ငဲ့ညီ/မ လေး — သတိထားရမယ့်
+## ညီလေး — သတိထားရမယ့်
 
 - RLS enable လုပ်ပြီး policy မရှိရင် API က row အားလုံး deny လုပ်တယ်။ ဒါက bug မဟုတ်ဘူး, secure default ပါ။
 - Table Editor/SQL Editor က database owner role နဲ့ run နိုင်လို့ RLS test အစစ်မဟုတ်ဘူး။ publishable client နဲ့ test ပါ။

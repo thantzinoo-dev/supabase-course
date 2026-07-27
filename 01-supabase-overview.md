@@ -180,7 +180,7 @@ Flutter App (Client)
 
 ---
 
-## ငဲ့ညီ/မ လေး — သတိထားရမယ့် Gotchas
+## ညီလေး — သတိထားရမယ့် Gotchas
 
 1. **Supabase က Firebase clone မဟုတ်ဘူး။** Firebase က NoSQL, Supabase က Postgres ဖြစ်လို့ schema design နဲ့ query mindset ကွာတယ်။
 2. **PostgREST က table schema ကို ဖော်ထုတ်ပေးတာပါ။** ဒါကြောင့် table/column naming ကို လိုက်နာနေရမယ်။ `camelCase` မသုံးပါနဲ့ — Postgres convention အတိုင်း `snake_case` သုံးပါ။

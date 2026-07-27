@@ -57,7 +57,7 @@ limit 1;
 
 Dashboard က SQL Explorer/debugging အတွက်ကောင်းတယ်။ Team schema source-of-truth မဖြစ်သင့်ဘူး။
 
-## ငဲ့ညီ/မ လေး — သတိထားရမယ့်
+## ညီလေး — သတိထားရမယ့်
 
 - `supabase start` Docker လိုတယ်။ Docker မရှိသေးရင် remote-first နဲ့စပြီး later local dev သို့ပြောင်းလို့ရတယ်။
 - Generated TypeScript types ကို schema ပြောင်းတိုင်း regenerate လုပ်ပါ: `supabase gen types typescript --linked > src/types/database.ts`။

@@ -105,7 +105,7 @@ export function createClient() {
 
 Browser client ကို Client Component မှာသုံးမယ်။ Server Component, Server Action, Route Handler အတွက် cookie-aware `createServerClient` လိုတယ်။ Auth chapter မှာ complete SSR setup နဲ့ `proxy.ts` session refresh ကိုလုပ်မယ်။
 
-## ငဲ့ညီ/မ လေး — သတိထားရမယ့်
+## ညီလေး — သတိထားရမယ့်
 
 - `.env` ကို `.gitignore` ထဲ ထည့်ပါ။ ဒါပေမဲ့ publishable key leak ကို gitignore က security boundary လို့ မထင်ပါနဲ့။
 - Flutter app မှာ `!` သုံးတာ setup နမူနာအတွက် OK ပေမဲ့ production မှာ missing env ကို friendly startup error ပေးတာကောင်းတယ်။

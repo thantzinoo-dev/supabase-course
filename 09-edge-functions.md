@@ -86,7 +86,7 @@ const { data, error } = await supabase.functions.invoke('increment-recipe-views'
 
 Signed-in user call တွေအတွက် `verify_jwt` default on ထားပါ။ Webhook လို third party က user JWT မပို့နိုင်တဲ့ case မှာသာ config ထဲ `verify_jwt = false` လုပ်ပြီး function code ထဲမှာ provider signature ကိုကိုယ်တိုင်စစ်ပါ။
 
-## ငဲ့ညီ/မ လေး — သတိထားရမယ့်
+## ညီလေး — သတိထားရမယ့်
 
 - Publishable key ကို `Authorization: Bearer ...` အနေနဲ့မပို့ပါနဲ့; key က JWT မဟုတ်ဘူး။ SDK ကိုသုံးရင် header handling လုပ်ပေးတယ်။
 - Heavy/long job ကို request ထဲမလုပ်ပါနဲ့။ Background task/queue ကိုစဉ်းစားပါ။

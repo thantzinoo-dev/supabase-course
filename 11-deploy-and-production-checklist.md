@@ -61,7 +61,7 @@ Environment တိုင်းမှာ URL, publishable key, redirect URL, OAut
 5. Smoke test: signup, sign-in, create recipe, image upload, comment
 6. Monitor logs after release
 
-## ငဲ့ညီ/မ လေး — သတိထားရမယ့်
+## ညီလေး — သတိထားရမယ့်
 
 - Service key leak က password leak ထက်အန္တရာယ်ကြီးတယ်; RLS bypass ဖြစ်နိုင်တယ်။ ချက်ချင်း revoke/rotate လုပ်ပါ။
 - Database migration က app code ထက် rollback ခက်တယ်။ Destructive `drop column` မတိုင်ခင် backward-compatible rollout စဉ်းစားပါ။
