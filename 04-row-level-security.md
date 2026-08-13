@@ -10,6 +10,8 @@
 
 Express မှာ `requireAuth` middleware နဲ့ `if (recipe.authorId !== req.user.id)` လို့ရေးမယ်။ Supabase မှာ client က database ကို API နဲ့တိုက်ရိုက်မေးတာမို့ အဲဒီ rule ကို **Postgres policy** အနေနဲ့ရေးရတယ်။ ဒါပဲ RLS ပါ။
 
+![Row Level Security Evaluation Engine](./images/04-rls-flow.svg)
+
 Publishable key ကို public app ထဲထည့်လို့ရတာ **RLS မှန်နေလို့သာ** ဖြစ်တယ်။ RLS off ထားရင် key ရတဲ့လူတိုင်း table data ကို query လုပ်နိုင်တယ်။
 
 ## Policy grammar အလွယ်

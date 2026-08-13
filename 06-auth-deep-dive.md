@@ -10,6 +10,8 @@
 
 `auth.users` မှာ email, encrypted password, provider data လို sensitive Auth data ရှိတယ်။ App UI data (`display_name`, avatar) ကို `public.profiles` မှာထားတယ်။ `profiles.id = auth.users.id` ဖြစ်တယ်။
 
+![User Signup & Profile Auto-Creation Trigger](./images/06-auth-trigger-flow.svg)
+
 Signup ဖြစ်တိုင်း profile row auto-create ဖို့ trigger:
 
 ```sql

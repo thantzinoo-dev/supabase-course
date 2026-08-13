@@ -23,6 +23,8 @@
 - **Realtime** — လူတစ်ယောက် comment ရေးလိုက်တာနဲ့ ချက်ချင်းပေါ်တာ
 - **Storage** — recipe ပုံတွေ upload လုပ်တာ
 
+![Mont-Sha System Architecture (Multi-Client)](./images/readme-architecture.svg)
+
 နှစ်ဖက် client တွေကို တည်ဆောက်မယ် — **Flutter (mobile)** နဲ့ **Next.js (web)** — ဒီနှစ်ခုလုံးက **Supabase project တစ်ခုတည်း**ကို ချိတ်မယ်။ ဒါကြောင့် "multi-client architecture ဘယ်လိုလုပ်ရမလဲ" ဆိုတာပါ လက်တွေ့မြင်ရမယ်။
 
 ---

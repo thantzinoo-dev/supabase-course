@@ -34,12 +34,7 @@ Slow query ဖြစ်ရင် guess မလုပ်ပါနဲ့။ Dashboa
 
 Development, staging, production ကို project/env မတူအောင်ထားရင် "test code က real user data ဖျက်" တဲ့ disaster မဖြစ်ဘူး။
 
-```text
-Flutter local .env       -> development Supabase project
-Next.js .env.local       -> development Supabase project
-CI/staging environment   -> staging project or branch
-Store/App production env -> production project
-```
+![Multi-Environment Isolation Strategy](./images/11-environments.svg)
 
 Environment တိုင်းမှာ URL, publishable key, redirect URL, OAuth provider credentials မတူနိုင်တယ်။ Environment variables ကို deploy platform secret manager မှာထားပါ။
 
@@ -54,12 +49,7 @@ Environment တိုင်းမှာ URL, publishable key, redirect URL, OAut
 
 ## Release flow
 
-1. Migration local/staging test
-2. RLS policy scenario test
-3. Flutter release build + Next.js production build
-4. Production migration deploy
-5. Smoke test: signup, sign-in, create recipe, image upload, comment
-6. Monitor logs after release
+![Production Release Checklist Flow](./images/11-release-flow.svg)
 
 ## ညီလေး — သတိထားရမယ့်
 

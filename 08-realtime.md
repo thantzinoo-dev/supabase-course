@@ -16,6 +16,8 @@
 
 Comment feed အတွက် Postgres Changes က ရိုးရှင်းဆုံးပါ။ Typing indicator လို DB မသိမ်းရမယ့် event အတွက် Broadcast သုံးပါ။
 
+![Realtime WebSocket Stream & Postgres WAL Event](./images/08-realtime-flow.svg)
+
 ## Realtime publication enable
 
 Dashboard -> Database -> Publications/Replication မှာ `comments` table ကို `supabase_realtime` publication ထဲထည့်ပါ။ SQL ဖြင့်လည်း:

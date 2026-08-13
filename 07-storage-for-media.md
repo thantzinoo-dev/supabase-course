@@ -11,6 +11,8 @@
 
 Mont-Sha recipe cover image တွေ လူတိုင်းမြင်ရမယ်ဆိုတော့ `recipe-images` ကို **public bucket** လုပ်မယ်။ Public က "file URL ကိုသိသူ download လုပ်လို့ရ" ဆိုတာပါ; upload/delete က RLS policy နဲ့ပဲ အုပ်ချုပ်ရသေးတယ်။
 
+![Storage Bucket Hierarchy & Upload Pipeline](./images/07-storage-structure.svg)
+
 Dashboard -> Storage -> New bucket:
 
 ```text

@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 440" width="100%" height="100%" style="background:#0b0f19; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; border-radius:12px; overflow:hidden;">
+  <defs>
+    <linearGradient id="bg-card" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="grad-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <linearGradient id="grad-green" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="grad-purple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c084fc"/>
+      <stop offset="100%" stop-color="#7e22ce"/>
+    </linearGradient>
+    <linearGradient id="grad-amber" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <linearGradient id="grad-rose" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fb7185"/>
+      <stop offset="100%" stop-color="#e11d48"/>
+    </linearGradient>
+    <linearGradient id="grad-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+    <filter id="glow-cyan" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#38bdf8" flood-opacity="0.3"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#64748b"/>
+    </marker>
+    <marker id="arrow-cyan" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#38bdf8"/>
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#34d399"/>
+    </marker>
+    <marker id="arrow-rose" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#fb7185"/>
+    </marker>
+  </defs>
+  <!-- Background Pattern Grid -->
+  <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+    <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#1e293b" stroke-width="0.5" stroke-opacity="0.5"/>
+  </pattern>
+  <rect width="100%" height="100%" fill="url(#grid)"/>
+
+  <text x="450" y="35" fill="#f8fafc" font-size="16" font-weight="700" text-anchor="middle">MONT-SHA DATABASE SCHEMA &amp; RELATIONSHIPS</text>
+  
+  <!-- auth.users -->
+  <g transform="translate(40, 65)" filter="url(#shadow)">
+    <rect width="240" height="120" rx="10" fill="url(#bg-card)" stroke="#64748b" stroke-width="1.5"/>
+    <rect x="0" y="0" width="240" height="32" rx="10" fill="#334155" fill-opacity="0.5"/>
+    <text x="15" y="21" fill="#94a3b8" font-size="13" font-weight="700">🔐 auth.users (Supabase Auth)</text>
+    <text x="15" y="55" fill="#38bdf8" font-size="12" font-family="monospace">PK  id (uuid)</text>
+    <text x="15" y="75" fill="#cbd5e1" font-size="12" font-family="monospace">    email (text)</text>
+    <text x="15" y="95" fill="#64748b" font-size="11">Managed by GoTrue</text>
+  </g>
+
+  <!-- 1:1 connector -->
+  <path d="M 280 120 L 340 120" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrow-cyan)"/>
+  <text x="310" y="112" fill="#38bdf8" font-size="11" font-weight="700" text-anchor="middle">1 : 1</text>
+
+  <!-- public.profiles -->
+  <g transform="translate(340, 65)" filter="url(#shadow)">
+    <rect width="250" height="150" rx="10" fill="url(#bg-card)" stroke="#38bdf8" stroke-width="1.5"/>
+    <rect x="0" y="0" width="250" height="32" rx="10" fill="#0369a1" fill-opacity="0.3"/>
+    <text x="15" y="21" fill="#38bdf8" font-size="13" font-weight="700">📋 public.profiles</text>
+    <text x="15" y="55" fill="#38bdf8" font-size="12" font-family="monospace">PK,FK id (uuid)</text>
+    <text x="15" y="75" fill="#cbd5e1" font-size="12" font-family="monospace">      display_name (text)</text>
+    <text x="15" y="95" fill="#cbd5e1" font-size="12" font-family="monospace">      avatar_path (text)</text>
+    <text x="15" y="115" fill="#cbd5e1" font-size="12" font-family="monospace">      created_at (timestamptz)</text>
+  </g>
+
+  <!-- 1:N connector (Profiles to Recipes) -->
+  <path d="M 465 215 L 465 270" stroke="#34d399" stroke-width="2" marker-end="url(#arrow-green)"/>
+  <text x="480" y="245" fill="#34d399" font-size="11" font-weight="700">1 : N</text>
+
+  <!-- public.recipes -->
+  <g transform="translate(340, 270)" filter="url(#shadow)">
+    <rect width="250" height="150" rx="10" fill="url(#bg-card)" stroke="#34d399" stroke-width="2"/>
+    <rect x="0" y="0" width="250" height="32" rx="10" fill="#065f46" fill-opacity="0.4"/>
+    <text x="15" y="21" fill="#34d399" font-size="13" font-weight="700">🍲 public.recipes</text>
+    <text x="15" y="52" fill="#34d399" font-size="11" font-family="monospace">PK  id (uuid)</text>
+    <text x="15" y="70" fill="#38bdf8" font-size="11" font-family="monospace">FK  author_id (uuid)</text>
+    <text x="15" y="88" fill="#cbd5e1" font-size="11" font-family="monospace">    title (text), desc (text)</text>
+    <text x="15" y="106" fill="#cbd5e1" font-size="11" font-family="monospace">    ingredients, steps (jsonb)</text>
+    <text x="15" y="124" fill="#cbd5e1" font-size="11" font-family="monospace">    is_published (bool)</text>
+  </g>
+
+  <!-- 1:N connector (Recipes to Comments) -->
+  <path d="M 590 345 L 650 345" stroke="#fbbf24" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="620" y="335" fill="#fbbf24" font-size="11" font-weight="700" text-anchor="middle">1 : N</text>
+
+  <!-- 1:N connector (Profiles to Comments) -->
+  <path d="M 590 140 L 760 140 L 760 270" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="4,4" marker-end="url(#arrow)"/>
+  <text x="680" y="130" fill="#fbbf24" font-size="11">author_id (1 : N)</text>
+
+  <!-- public.comments -->
+  <g transform="translate(650, 270)" filter="url(#shadow)">
+    <rect width="220" height="150" rx="10" fill="url(#bg-card)" stroke="#fbbf24" stroke-width="1.5"/>
+    <rect x="0" y="0" width="220" height="32" rx="10" fill="#78350f" fill-opacity="0.4"/>
+    <text x="15" y="21" fill="#fbbf24" font-size="13" font-weight="700">💬 public.comments</text>
+    <text x="15" y="52" fill="#fbbf24" font-size="11" font-family="monospace">PK  id (uuid)</text>
+    <text x="15" y="70" fill="#34d399" font-size="11" font-family="monospace">FK  recipe_id (uuid)</text>
+    <text x="15" y="88" fill="#38bdf8" font-size="11" font-family="monospace">FK  author_id (uuid)</text>
+    <text x="15" y="106" fill="#cbd5e1" font-size="11" font-family="monospace">    body (text)</text>
+    <text x="15" y="124" fill="#cbd5e1" font-size="11" font-family="monospace">    created_at (timestamptz)</text>
+  </g>
+</svg>

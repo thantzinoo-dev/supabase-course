@@ -66,13 +66,7 @@ create index comments_recipe_id_created_at_idx
 
 ### Relationship map
 
-```text
-auth.users (Supabase Auth owns this)
-    1 └── 1 profiles
-                 1 └── many recipes
-                 1 └── many comments
-recipes          1 └── many comments
-```
+![Mont-Sha Database Schema & Relationships](./images/03-relationship-map.svg)
 
 `auth.users` ကို app table လို မပြင်ပါနဲ့။ Supabase Auth ပိုင်တဲ့ schema ပါ။ App-visible extra data အတွက် `public.profiles` ကို `id` တူတူနဲ့သုံးတယ်။
 

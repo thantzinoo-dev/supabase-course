@@ -45,9 +45,7 @@ Supabase ဆိုတာ **open-source Backend-as-a-Service (BaaS)** ပါ။ �
 
 ### မင်း DIY လုပ်ရင် လုပ်ရတာတွေ
 
-```
-User → Express API → Controller → Service → ORM/Query Builder → Postgres
-```
+![DIY Architecture Flow](./images/01-diy-flow.svg)
 
 - CRUD endpoint တွေ ရေးရမယ် (GET /recipes, POST /recipes, ...)
 - Auth middleware ရေးရမယ် (JWT verify, refresh token)
@@ -58,9 +56,7 @@ User → Express API → Controller → Service → ORM/Query Builder → Postgr
 
 ### Supabase ကို သုံးရင်
 
-```
-User → Supabase Client SDK → Kong API Gateway → {PostgREST, GoTrue, Realtime, Storage, Edge Functions} → Postgres
-```
+![Supabase Managed Architecture](./images/01-supabase-flow.svg)
 
 ဒီ infrastructure အလုပ်အများစုကို Supabase က managed service အဖြစ်ပေးလို့ မင်းက **business logic** ကို ပိုအာရုံစိုက်နိုင်တယ်။
 
@@ -82,25 +78,7 @@ User → Supabase Client SDK → Kong API Gateway → {PostgREST, GoTrue, Realti
 
 Supabase project တစ်ခုမှာ အောက်ပါ service တွေ ပါတယ်:
 
-```
-                        ┌─────────────────────────────────┐
-                        │          Kong (API Gateway)      │
-                        └──────────┬──────────────────────┘
-                                   │
-       ┌───────────┬────────┬───────┼───────┬──────────┬───────────┐
-       ▼           ▼        ▼       ▼       ▼          ▼           ▼
-   ┌───────┐ ┌────────┐ ┌──────┐ ┌────────┐ ┌─────────┐ ┌───────────┐
-   │GoTrue │ │PostgREST│ │Realtime│ │Storage │ │Functions│ │postgres_  │
-   │(Auth) │ │ (API)  │ │       │ │        │ │ (Deno)  │ │  meta     │
-   └───┬───┘ └───┬────┘ └──┬───┘ └───┬────┘ └────┬────┘ └─────┬─────┘
-       │         │         │         │           │            │
-       └─────────┴─────────┴─────────┴───────────┴────────────┘
-                                   │
-                            ┌──────▼──────┐
-                            │   Postgres   │
-                            │  (Database)  │
-                            └─────────────┘
-```
+![Supabase Architecture](./images/01-supabase-architecture.svg)
 
 ဒီ service တွေကို အရမ်း သိထားဖို့ လိုပါ:
 
@@ -140,29 +118,13 @@ Serverless function တွေ ပါ။ TypeScript/JavaScript နဲ့ ရေ�
 
 မင်း `Supabase.initialize()` လုပ်ထားပြီး `dotenv` နဲ့ key တွေ load လုပ်ထားပြီ။ ဒါက ဘယ်နေရာမှာ ပါလဲ architecture ထဲမှာ:
 
-```
-Flutter App (Client)
-    │
-    ▼  Supabase Flutter SDK
-    │
-    ▼  HTTP/WebSocket requests
-    │
-    ▼  Supabase Cloud (Kong API Gateway)
-        │
-        ├─► GoTrue    (auth operations)
-        ├─► PostgREST (CRUD queries)
-        ├─► Realtime  (WebSocket subscriptions)
-        └─► Storage   (file uploads)
-```
+![Client Integration](./images/01-flutter-architecture.svg)
 
 မင်းရဲ့ Flutter app က **Supabase Cloud** ကို HTTP နဲ့ WebSocket တွေ နဲ့ ပြီးဆက်ပါတယ်။ Kong API Gateway က request ကို သတ်မှတ်ထားတဲ့ service ကို route လုပ်ပေးပါ။
 
 **တိကျတိကျပြောရင်** — မင်း `supabase.from('recipes').select()` လုပ်တော့:
 
-1. Flutter SDK → HTTP GET request → `https://<project-ref>.supabase.co/rest/v1/recipes`
-2. Kong → PostgREST
-3. PostgREST → `SELECT * FROM recipes` (Postgres မှာ run လုပ်တယ်)
-4. ပြန်လာတဲ့ data ကို Kong → Flutter app
+![Request Sequence](./images/01-request-sequence.svg)
 
 အဲဒါပါ။ မင်းရဲ့ server-side controller မရေးတော့ဘဲ — SDK က ကိုယ်စီ အလုပ်လုပ်ပေးတာပါ။
 

@@ -50,6 +50,8 @@ flutter:
 
 ## API keys ကို မမှားပါနဲ့
 
+![API Keys Security](./images/02-api-keys-security.svg)
+
 | Key | ဘယ်မှာသုံး | RLS |
 |---|---|---|
 | `sb_publishable_...` | Flutter, browser, public frontend | bypass မလုပ်ဘူး |

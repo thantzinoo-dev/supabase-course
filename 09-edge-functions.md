@@ -17,6 +17,8 @@ CRUD + RLS နဲ့ပြီးရင် client က database ကိုတို
 
 Edge Function က globally distributed, Deno-compatible TypeScript server code ပါ။ Client ထဲမှာ secret မထည့်ရဖို့ server boundary ပေးတာပါ။
 
+![Edge Function Invocation Pipeline](./images/09-edge-functions-flow.svg)
+
 ## Function create and deploy
 
 ```bash

@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 180" width="100%" height="100%" style="background:#0b0f19; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; border-radius:12px; overflow:hidden;">
+  <defs>
+    <linearGradient id="bg-card" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="grad-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <linearGradient id="grad-green" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="grad-purple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c084fc"/>
+      <stop offset="100%" stop-color="#7e22ce"/>
+    </linearGradient>
+    <linearGradient id="grad-amber" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <linearGradient id="grad-rose" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fb7185"/>
+      <stop offset="100%" stop-color="#e11d48"/>
+    </linearGradient>
+    <linearGradient id="grad-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+    <filter id="glow-cyan" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#38bdf8" flood-opacity="0.3"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#64748b"/>
+    </marker>
+    <marker id="arrow-cyan" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#38bdf8"/>
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#34d399"/>
+    </marker>
+    <marker id="arrow-rose" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#fb7185"/>
+    </marker>
+  </defs>
+  <!-- Background Pattern Grid -->
+  <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+    <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#1e293b" stroke-width="0.5" stroke-opacity="0.5"/>
+  </pattern>
+  <rect width="100%" height="100%" fill="url(#grid)"/>
+
+  <text x="30" y="38" fill="#94a3b8" font-size="13" font-weight="600" letter-spacing="1">TRADITIONAL DIY ARCHITECTURE</text>
+  
+  <!-- Flow nodes -->
+  <!-- User -->
+  <g transform="translate(30, 60)" filter="url(#shadow)">
+    <rect width="110" height="70" rx="10" fill="url(#bg-card)" stroke="#3b82f6" stroke-width="1.5"/>
+    <text x="55" y="32" fill="#60a5fa" font-size="18" text-anchor="middle">👤</text>
+    <text x="55" y="52" fill="#f8fafc" font-size="13" font-weight="600" text-anchor="middle">User / Client</text>
+  </g>
+  <line x1="140" y1="95" x2="168" y2="95" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Express API -->
+  <g transform="translate(170, 60)" filter="url(#shadow)">
+    <rect width="120" height="70" rx="10" fill="url(#bg-card)" stroke="#f59e0b" stroke-width="1.5"/>
+    <text x="60" y="32" fill="#fbbf24" font-size="18" text-anchor="middle">🚀</text>
+    <text x="60" y="52" fill="#f8fafc" font-size="13" font-weight="600" text-anchor="middle">Express API</text>
+  </g>
+  <line x1="290" y1="95" x2="318" y2="95" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Controller -->
+  <g transform="translate(320, 60)" filter="url(#shadow)">
+    <rect width="110" height="70" rx="10" fill="url(#bg-card)" stroke="#64748b" stroke-width="1.5"/>
+    <text x="55" y="32" fill="#94a3b8" font-size="18" text-anchor="middle">⚙️</text>
+    <text x="55" y="52" fill="#f8fafc" font-size="13" font-weight="600" text-anchor="middle">Controller</text>
+  </g>
+  <line x1="430" y1="95" x2="458" y2="95" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Service -->
+  <g transform="translate(460, 60)" filter="url(#shadow)">
+    <rect width="110" height="70" rx="10" fill="url(#bg-card)" stroke="#64748b" stroke-width="1.5"/>
+    <text x="55" y="32" fill="#94a3b8" font-size="18" text-anchor="middle">💼</text>
+    <text x="55" y="52" fill="#f8fafc" font-size="13" font-weight="600" text-anchor="middle">Service Layer</text>
+  </g>
+  <line x1="570" y1="95" x2="598" y2="95" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ORM -->
+  <g transform="translate(600, 60)" filter="url(#shadow)">
+    <rect width="120" height="70" rx="10" fill="url(#bg-card)" stroke="#a855f7" stroke-width="1.5"/>
+    <text x="60" y="32" fill="#c084fc" font-size="18" text-anchor="middle">🗄️</text>
+    <text x="60" y="52" fill="#f8fafc" font-size="13" font-weight="600" text-anchor="middle">ORM / Query</text>
+  </g>
+  <line x1="720" y1="95" x2="748" y2="95" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Postgres -->
+  <g transform="translate(750, 60)" filter="url(#shadow)">
+    <rect width="120" height="70" rx="10" fill="url(#bg-card)" stroke="#38bdf8" stroke-width="2"/>
+    <text x="60" y="32" fill="#38bdf8" font-size="18" text-anchor="middle">🐘</text>
+    <text x="60" y="52" fill="#38bdf8" font-size="13" font-weight="700" text-anchor="middle">Postgres DB</text>
+  </g>
+</svg>

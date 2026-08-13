@@ -10,6 +10,8 @@
 
 Dashboard မှာ table ပြင်လိုက်ရင် "ဘယ်နေ့ ဘာပြင်ခဲ့လဲ", teammate machine မှာဘယ်လိုပြန်တင်မလဲ မသိတော့ဘူး။ Migration က ordered SQL files ပါ။ Git commit လို database schema history ဖြစ်တယ်။
 
+![Supabase CLI Database Migration Workflow](./images/10-migration-lifecycle.svg)
+
 ## CLI workflow
 
 ```bash

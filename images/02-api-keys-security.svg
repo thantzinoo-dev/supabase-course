@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 380" width="100%" height="100%" style="background:#0b0f19; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; border-radius:12px; overflow:hidden;">
+  <defs>
+    <linearGradient id="bg-card" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="grad-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <linearGradient id="grad-green" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="grad-purple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c084fc"/>
+      <stop offset="100%" stop-color="#7e22ce"/>
+    </linearGradient>
+    <linearGradient id="grad-amber" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <linearGradient id="grad-rose" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fb7185"/>
+      <stop offset="100%" stop-color="#e11d48"/>
+    </linearGradient>
+    <linearGradient id="grad-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+    <filter id="glow-cyan" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#38bdf8" flood-opacity="0.3"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#64748b"/>
+    </marker>
+    <marker id="arrow-cyan" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#38bdf8"/>
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#34d399"/>
+    </marker>
+    <marker id="arrow-rose" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#fb7185"/>
+    </marker>
+  </defs>
+  <!-- Background Pattern Grid -->
+  <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+    <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#1e293b" stroke-width="0.5" stroke-opacity="0.5"/>
+  </pattern>
+  <rect width="100%" height="100%" fill="url(#grid)"/>
+
+  <text x="450" y="35" fill="#f8fafc" font-size="16" font-weight="700" text-anchor="middle">SUPABASE API KEYS &amp; SECURITY BOUNDARIES</text>
+  
+  <!-- Left Side: Public Zone -->
+  <g transform="translate(40, 65)" filter="url(#shadow)">
+    <rect width="380" height="230" rx="14" fill="url(#bg-card)" stroke="#38bdf8" stroke-width="1.5"/>
+    <rect x="20" y="20" width="340" height="35" rx="8" fill="#0369a1" fill-opacity="0.3"/>
+    <text x="190" y="42" fill="#38bdf8" font-size="13" font-weight="700" text-anchor="middle">📱 PUBLIC FRONTEND CLIENT</text>
+    
+    <text x="30" y="85" fill="#f8fafc" font-size="14" font-weight="600">Key: sb_publishable_... (or anon)</text>
+    <text x="30" y="110" fill="#94a3b8" font-size="12">• Used in Flutter app, Next.js browser bundle</text>
+    <text x="30" y="130" fill="#94a3b8" font-size="12">• Client extracts can NEVER be prevented</text>
+    
+    <!-- Security Box -->
+    <rect x="25" y="150" width="330" height="55" rx="8" fill="#1e293b" stroke="#34d399" stroke-width="1.5"/>
+    <text x="40" y="173" fill="#34d399" font-size="13" font-weight="700">🛡️ Row Level Security (RLS) Enforced</text>
+    <text x="40" y="193" fill="#94a3b8" font-size="11">Only permitted rows are returned to the user</text>
+  </g>
+
+  <!-- Right Side: Server Zone -->
+  <g transform="translate(480, 65)" filter="url(#shadow)">
+    <rect width="380" height="230" rx="14" fill="url(#bg-card)" stroke="#fb7185" stroke-width="1.5"/>
+    <rect x="20" y="20" width="340" height="35" rx="8" fill="#be123c" fill-opacity="0.3"/>
+    <text x="190" y="42" fill="#fb7185" font-size="13" font-weight="700" text-anchor="middle">🔒 TRUSTED BACKEND SERVER</text>
+    
+    <text x="30" y="85" fill="#f8fafc" font-size="14" font-weight="600">Key: sb_secret_... (or service_role)</text>
+    <text x="30" y="110" fill="#94a3b8" font-size="12">• Used ONLY in secure server environments</text>
+    <text x="30" y="130" fill="#94a3b8" font-size="12">• Edge Functions, secure Node.js scripts</text>
+    
+    <!-- Warning Box -->
+    <rect x="25" y="150" width="330" height="55" rx="8" fill="#1e293b" stroke="#fb7185" stroke-width="1.5"/>
+    <text x="40" y="173" fill="#fb7185" font-size="13" font-weight="700">⚠️ Bypasses RLS Completely (Full Admin)</text>
+    <text x="40" y="193" fill="#fb7185" font-size="11">NEVER put this in Flutter / Client code or GitHub!</text>
+  </g>
+
+  <!-- Bottom Callout -->
+  <g transform="translate(40, 315)">
+    <rect width="820" height="40" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="410" y="25" fill="#fbbf24" font-size="12" font-weight="600" text-anchor="middle">💡 Golden Rule: Client-side secret key leak = Total Database Compromise. Always rely on RLS with Publishable Key.</text>
+  </g>
+</svg>
